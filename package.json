@@ -1,0 +1,26 @@
+{
+  "name": "cards-generator",
+  "version": "1.0.0",
+  "description": "Discount cards generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "server": "nodemon --ignore db.json index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "cards",
+    "discount",
+    "generator"
+  ],
+  "author": "Sergey Filkin",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "lowdb": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "shortid": "^2.2.8"
+  }
+}
